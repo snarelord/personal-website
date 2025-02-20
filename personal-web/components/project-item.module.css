@@ -1,0 +1,97 @@
+.portfolioItem {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  margin-bottom: 15rem;
+  align-items: center;
+}
+
+.portfolioItem.reversed {
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.portfolioItem.reversed .portfolioContent {
+  order: 2;
+}
+
+.portfolioContent {
+  padding: 2rem;
+}
+
+.projectNumber {
+  font-size: 1.2rem;
+  color: #666;
+  display: block;
+  margin-bottom: 1rem;
+  font-family: var(--font-mono);
+}
+
+.portfolioContent h2 {
+  font-family: var(--font-playfair);
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #000;
+}
+
+.portfolioContent p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.projectLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  color: #000;
+  text-decoration: none;
+  transition: gap 0.3s ease;
+}
+
+.projectLink:hover {
+  gap: 1rem;
+}
+
+.portfolioImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+
+.portfolioImage {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.portfolioImageWrapper:hover .portfolioImage {
+  transform: scale(1.02);
+}
+
+@media (max-width: 1024px) {
+  .portfolioItem,
+  .portfolioItem.reversed {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 8rem;
+  }
+
+  .portfolioItem.reversed .portfolioContent {
+    order: 1;
+  }
+
+  .portfolioImageWrapper {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolioContent h2 {
+    font-size: 2.5rem;
+  }
+}
+
