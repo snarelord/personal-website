@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/kitjones/Desktop/personal-website/app/layout\":[\"static/media/bb3ef058b751a6ad-s.p.woff2\",\"static/media/dcc209c0b1ab30af-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
