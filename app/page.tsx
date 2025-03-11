@@ -23,7 +23,7 @@ export default function Home() {
         <div className={styles.heroOverlay} />
       </section>
 
-      <section className={styles.about}>
+      <section id="about" className={styles.about}>
         <div className={styles.aboutContent}>
           <h3>Hi, I'm Kit!</h3>
           <p>
@@ -42,34 +42,37 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.portfolio}>
-        <ProjectItem
-          number="01"
-          title="Project Name"
-          description="A brief description of the project and the technologies used. Explain the problem it solves and your role in developing it."
-          link="#"
-          imageUrl="/placeholder.svg?height=600&width=800"
-        />
+      <section id="portfolio" className={styles.about}>
+        <div className={styles.portfolioContent}>
+          <h3>Portfolio</h3>
+          <ProjectItem
+            number="01"
+            title="Novari"
+            description="A website application, planned and built over the group final project week at the School of Code. Novari is designed to tackle the issue of users loneliness and personal growth through community connection. Created with Next.js, React, TypeScript/JavaScript and Tailwind."
+            link="https://github.com/AJHemmings/Novari"
+            imageUrl="/novari.png?height=600&width=800"
+          />
 
-        <ProjectItem
-          number="02"
-          title="Project Name"
-          description="A brief description of the project and the technologies used. Explain the problem it solves and your role in developing it."
-          link="#"
-          imageUrl="/placeholder.svg?height=600&width=800"
-          isReversed={true}
-        />
+          <ProjectItem
+            number="02"
+            title="Monopoly DEAL"
+            description="In development website application remaking the Monopoly Deal card game. Building with Next.js, React, TypeScript/JavaScript. The game is designed to be played with friends and family online."
+            link="https://github.com/snarelord/monopoly-deal"
+            imageUrl="/monopoly-deal.png?height=600&width=800"
+            isReversed={true}
+          />
 
-        <ProjectItem
-          number="03"
-          title="Project Name"
-          description="A brief description of the project and the technologies used. Explain the problem it solves and your role in developing it."
-          link="#"
-          imageUrl="/placeholder.svg?height=600&width=800"
-        />
+          {/* <ProjectItem
+            number="03"
+            title="Project Name"
+            description="A brief description of the project and the technologies used. Explain the problem it solves and your role in developing it."
+            link="#"
+            imageUrl="/placeholder.svg?height=600&width=800"
+          /> */}
+        </div>
       </section>
 
-      <section className={styles.contact}>
+      <section id="contact" className={styles.contact}>
         <div className={styles.contactContent}>
           <h2>Contact</h2>
           <a href="mailto:kitjonesuk@gmail.com" className={styles.contactLink}>
