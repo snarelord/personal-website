@@ -49,7 +49,7 @@
 }
 
 .about {
-  padding: 10rem 4rem;
+  padding: 4rem 4rem;
   background: #fff;
 }
 
@@ -226,3 +226,7 @@
   }
 }
 
+.portfolioContent h3 {
+  text-align: center;
+  padding: 4rem;
+}

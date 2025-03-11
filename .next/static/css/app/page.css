@@ -219,7 +219,7 @@
 }
 
 .page_about__YOpBg {
-  padding: 10rem 4rem;
+  padding: 4rem 4rem;
   background: #fff;
 }
 
@@ -397,4 +397,8 @@
   }
 }
 
+.page_portfolioContent__aN3i8 h3 {
+  text-align: center;
+  padding: 4rem;
+}
 

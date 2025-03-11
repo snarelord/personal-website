@@ -1,17 +1,35 @@
-import Link from "next/link";
+"use client";
+
+// import Link from "next/link";
 import { Github, Linkedin, Instagram } from "lucide-react";
 import styles from "./header.module.css";
 
 export default function Header() {
+  const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <header className={styles.header}>
-      <Link href="/" className={styles.logo}>
-        Kit Jones
-      </Link>
+      <p className={styles.logo}>Kit Jones</p>
       <nav className={styles.nav}>
-        <Link href="/portfolio">Portfolio</Link>
-        <Link href="/about">About</Link>
-        <Link href="/contact">Contact</Link>
+        <a
+          onClick={() => handleScroll("portfolio")}
+          style={{ cursor: "pointer" }}
+        >
+          Portfolio
+        </a>
+        <a onClick={() => handleScroll("about")} style={{ cursor: "pointer" }}>
+          About
+        </a>
+        <a
+          onClick={() => handleScroll("contact")}
+          style={{ cursor: "pointer" }}
+        >
+          Contact
+        </a>
         <div className={styles.social}>
           <a
             href="https://github.com/snarelord"
