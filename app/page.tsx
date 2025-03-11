@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "Kit Jones - Software Engineer",
+};
+
 import Image from "next/image";
 import Header from "@/components/header";
 import ProjectItem from "@/components/project-item";
