@@ -171,11 +171,11 @@
 .page_main__nw1Wk {
   min-height: 100vh;
   background: #fff;
-  padding-top: 60px; /* Add this to account for the fixed header */
+  padding-top: 60px;
 }
 
 .page_hero__7KFOs {
-  height: calc(100vh - 60px); /* Adjust this to account for the fixed header */
+  height: calc(100vh - 60px);
   position: relative;
   display: flex;
   align-items: center;
@@ -219,7 +219,7 @@
 }
 
 .page_about__YOpBg {
-  padding: 4rem 4rem;
+  padding: 4rem 2rem;
   background: #fff;
 }
 
