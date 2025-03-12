@@ -1,11 +1,11 @@
 .main {
   min-height: 100vh;
   background: #fff;
-  padding-top: 60px; /* Add this to account for the fixed header */
+  padding-top: 60px;
 }
 
 .hero {
-  height: calc(100vh - 60px); /* Adjust this to account for the fixed header */
+  height: calc(100vh - 60px);
   position: relative;
   display: flex;
   align-items: center;
@@ -49,7 +49,7 @@
 }
 
 .about {
-  padding: 4rem 4rem;
+  padding: 4rem 2rem;
   background: #fff;
 }
 
