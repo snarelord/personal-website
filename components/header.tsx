@@ -34,6 +34,29 @@ export default function Header() {
         >
           Contact
         </a>
+        <div className={styles.social}>
+          <a
+            href="https://github.com/snarelord"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Github size={20} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/kit-jones-64926a2aa/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Linkedin size={20} />
+          </a>
+          <a
+            href="https://instagram.com/circumferencemusicuk/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Instagram size={20} />
+          </a>
+        </div>
       </nav>
       <button
         className={styles.hamburger}
