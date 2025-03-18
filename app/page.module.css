@@ -85,6 +85,12 @@
   align-items: center;
 }
 
+.projectWrapper {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
 .portfolioItem:nth-child(even) {
   grid-template-columns: 1.5fr 1fr;
 }
