@@ -52,15 +52,15 @@ export default function Home() {
       duration: 1800,
       easing: "easeOutQuad",
     });
-    anime({
-      targets: ".kit",
-      scale: [1],
-      opacity: [0.6, 1],
-      duration: 1000,
-      easing: "easeInOutSine",
-      direction: "alternate",
-      loop: true,
-    });
+    // anime({
+    //   targets: ".kit",
+    //   scale: [1],
+    //   opacity: [0.6, 1],
+    //   duration: 1000,
+    //   easing: "easeInOutSine",
+    //   direction: "alternate",
+    //   loop: true,
+    // });
   }, []);
 
   return (
