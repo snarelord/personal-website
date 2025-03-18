@@ -13,20 +13,28 @@ export default function Home() {
 
   // intersection observer watches for elements entering the viewport
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          anime({
-            targets: entry.target,
-            opacity: [0, 1],
-            translateY: [50, 0],
-            duration: 1000,
-            easing: "easeOutQuad",
-          });
-          observer.unobserve(entry.target); // stop once animated
-        }
-      });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            anime({
+              targets: entry.target,
+              opacity: [0, 1],
+              translateY: [200, 0],
+              duration: 1000,
+              easing: "easeInQuad",
+            });
+            observer.unobserve(entry.target); // stop once animated
+          }
+        });
+      },
+      { threshold: 0.1 } // trigger when 10% of element is visible
+    );
+    // observe each project item
+    projectRefs.current.forEach((el) => {
+      if (el) observer.observe(el);
     });
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -96,29 +104,42 @@ export default function Home() {
       <section id="portfolio" className={styles.about}>
         <div className={styles.portfolioContent}>
           <h3>Portfolio</h3>
-          <ProjectItem
-            number="01"
-            title="Novari"
-            description="A website application, planned and built over the group final project week at the School of Code. Novari is designed to tackle the issue of users loneliness and personal growth through community connection. Created with Next.js, React, TypeScript/JavaScript and Tailwind."
-            link="https://github.com/AJHemmings/Novari"
-            imageUrl="/novari.png?height=600&width=800"
-          />
+          <div
+            ref={(el) => {
+              projectRefs.current[0] = el;
+            }}
+            className={styles.projectWrapper}
+          >
+            <ProjectItem
+              number="01"
+              title="Novari"
+              description="A website application, planned and built over the group final project week at the School of Code. Novari is designed to tackle the issue of users loneliness and personal growth through community connection. Created with Next.js, React, TypeScript/JavaScript and Tailwind."
+              link="https://github.com/AJHemmings/Novari"
+              imageUrl="/novari.png?height=600&width=800"
+            />
+          </div>
 
-          <ProjectItem
-            number="02"
-            title="Monopoly DEAL"
-            description="In development website application remaking the Monopoly Deal card game. Building with Next.js, React, TypeScript/JavaScript. The game is designed to be played with friends and family online."
-            link="https://github.com/snarelord/monopoly-deal"
-            imageUrl="/monopoly-deal.png?height=600&width=800"
-            isReversed={true}
-          />
-
+          <div
+            ref={(el) => {
+              projectRefs.current[1] = el;
+            }}
+            className={styles.projectWrapper}
+          >
+            <ProjectItem
+              number="02"
+              title="Monopoly DEAL"
+              description="In development website application remaking the Monopoly Deal card game. Building with Next.js, React, TypeScript/JavaScript. The game is designed to be played with friends and family online."
+              link="https://github.com/snarelord/monopoly-deal"
+              imageUrl="/monopoly-deal.png?height=600&width=800"
+              isReversed={true}
+            />
+          </div>
           {/* <ProjectItem
             number="03"
-            title="Project Name"
-            description="A brief description of the project and the technologies used. Explain the problem it solves and your role in developing it."
+            title=""
+            description=""
             link="#"
-            imageUrl="/placeholder.svg?height=600&width=800"
+            imageUrl=""
           /> */}
         </div>
       </section>
