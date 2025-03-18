@@ -52,15 +52,13 @@ export default function Home() {
       duration: 1800,
       easing: "easeOutQuad",
     });
-    // anime({
-    //   targets: ".kit",
-    //   scale: [1],
-    //   opacity: [0.6, 1],
-    //   duration: 1000,
-    //   easing: "easeInOutSine",
-    //   direction: "alternate",
-    //   loop: true,
-    // });
+    anime({
+      targets: ".portfolio-text",
+      scale: [1.8, 1.3],
+      opacity: [0.6, 1],
+      duration: 1000,
+      easing: "easeInQuad",
+    });
   }, []);
 
   return (
@@ -101,9 +99,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="portfolio" className={styles.about}>
+      <section id="portfolio" className={styles.portfolio}>
         <div className={styles.portfolioContent}>
-          <h3>Portfolio</h3>
+          <h3 className="portfolio-text">Portfolio</h3>
           <div
             ref={(el) => {
               projectRefs.current[0] = el;
