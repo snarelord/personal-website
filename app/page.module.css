@@ -73,7 +73,7 @@
 }
 
 .portfolio {
-  padding: 2rem;
+  padding: 1rem;
   background: #fff;
 }
 
@@ -88,15 +88,15 @@
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 2rem;
-  margin-bottom: 15rem;
+  margin-bottom: 1rem;
   align-items: center;
 }
 
-.projectWrapper {
+/* .projectWrapper {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.6s ease, transform 0.6s ease;
-}
+} */
 
 .portfolioItem:nth-child(even) {
   grid-template-columns: 1.5fr 1fr;
@@ -106,9 +106,9 @@
   order: 1;
 }
 
-.portfolioContent {
+/* .portfolioContent {
   padding: 1rem;
-}
+} */
 
 .projectNumber {
   font-size: 1.2rem;
