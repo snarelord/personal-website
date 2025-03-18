@@ -1,13 +1,60 @@
-export const metadata = {
-  title: "Kit Jones - Software Engineer",
-};
+"use client";
 
+import { useEffect, useRef } from "react";
+import anime from "animejs";
 import Image from "next/image";
 import Header from "@/components/header";
 import ProjectItem from "@/components/project-item";
 import styles from "./page.module.css";
+import { Inter } from "next/font/google";
 
 export default function Home() {
+  const projectRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  // intersection observer watches for elements entering the viewport
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          anime({
+            targets: entry.target,
+            opacity: [0, 1],
+            translateY: [50, 0],
+            duration: 1000,
+            easing: "easeOutQuad",
+          });
+          observer.unobserve(entry.target); // stop once animated
+        }
+      });
+    });
+  }, []);
+
+  useEffect(() => {
+    anime({
+      targets: "h1",
+      opacity: [0, 1],
+      translateY: [-50, 0],
+      duration: 1800,
+      easing: "easeOutQuad",
+    });
+    anime({
+      targets: "h2",
+      opacity: [0, 1],
+      translateY: [50, 0],
+      duration: 1800,
+      easing: "easeOutQuad",
+    });
+    anime({
+      targets: ".kit",
+      scale: [1],
+      opacity: [0.6, 1],
+      duration: 1000,
+      easing: "easeInOutSine",
+      direction: "alternate",
+      loop: true,
+    });
+  }, []);
+
   return (
     <main className={styles.main}>
       <Header />
@@ -29,7 +76,7 @@ export default function Home() {
 
       <section id="about" className={styles.about}>
         <div className={styles.aboutContent}>
-          <h3>Hi, I'm Kit!</h3>
+          <h3 className="kit">Hi, I'm Kit!</h3>
           <p>
             In 2024 I decided to take my passion for creation and
             problem-solving into the world of programming. With nearly four
