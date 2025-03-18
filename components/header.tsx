@@ -1,10 +1,14 @@
 "use client";
 
 // import Link from "next/link";
-import { Github, Linkedin, Instagram } from "lucide-react";
+import { useState } from "react";
+import { Github, Linkedin, Instagram, Menu, X } from "lucide-react";
 import styles from "./header.module.css";
 
 export default function Header() {
+  // add state for hamburger menu, only viewable on mobile
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const handleScroll = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -30,30 +34,40 @@ export default function Header() {
         >
           Contact
         </a>
-        <div className={styles.social}>
-          <a
-            href="https://github.com/snarelord"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Github size={20} />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/kit-jones-64926a2aa/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Linkedin size={20} />
-          </a>
-          <a
-            href="https://instagram.com/circumferencemusicuk/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Instagram size={20} />
-          </a>
-        </div>
       </nav>
+      <button
+        className={styles.hamburger}
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle social links"
+      >
+        {menuOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
+      <div
+        className={`${styles.mobileMenu}
+      ${menuOpen ? styles.mobileMenuOpen : ""}`}
+      >
+        <a
+          href="https://github.com/snarelord"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Github size={20} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/kit-jones-64926a2aa/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Linkedin size={20} />
+        </a>
+        <a
+          href="https://instagram.com/circumferencemusicuk/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Instagram size={20} />
+        </a>
+      </div>
     </header>
   );
 }
