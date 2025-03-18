@@ -6,7 +6,7 @@ import Image from "next/image";
 import Header from "@/components/header";
 import ProjectItem from "@/components/project-item";
 import styles from "./page.module.css";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 
 export default function Home() {
   const projectRefs = useRef<(HTMLDivElement | null)[]>([]);
