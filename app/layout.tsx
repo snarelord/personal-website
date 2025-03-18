@@ -14,9 +14,8 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Your Name - Software Engineer",
+  title: "Kit Jones - Software Engineer",
   description: "Personal portfolio website",
-  generator: "v0.dev",
 };
 
 export default function RootLayout({
