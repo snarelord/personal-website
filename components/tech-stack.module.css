@@ -1,0 +1,11 @@
+.techStackIcon {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.techStackTitle {
+  font-size: 18px;
+  font-weight: 500;
+}
