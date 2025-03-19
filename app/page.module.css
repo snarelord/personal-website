@@ -273,3 +273,15 @@
   text-align: center;
   padding: 4rem;
 }
+
+@media (max-width: 768px) {
+  .techStackContent {
+    grid-template-columns: repeat(2, 1fr);
+    width: 95%;
+    justify-content: center;
+  }
+
+  .techStackItem {
+    height: 100px;
+  }
+}
