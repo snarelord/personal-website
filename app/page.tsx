@@ -32,10 +32,11 @@ export default function Home() {
           if (entry.isIntersecting) {
             anime({
               targets: entry.target,
-              opacity: [0, 1],
-              translateY: [200, 0],
+              opacity: 1,
+              visibility: "visible",
+              translateY: "translateY(0",
               duration: 1000,
-              easing: "easeInQuad",
+              easing: "easeOutExpo",
             });
             observer.unobserve(entry.target); // stop once animated
           }
