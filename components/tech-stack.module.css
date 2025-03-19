@@ -18,3 +18,13 @@
   text-align: center;
   order: -1;
 }
+
+@media (max-width: 768px) {
+  .techStackName {
+    font-size: 10px;
+  }
+
+  .techStackIcon {
+    height: 90%;
+  }
+}

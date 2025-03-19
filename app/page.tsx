@@ -128,7 +128,7 @@ export default function Home() {
             <TechStack name="Next.js" icon={<PanelsTopLeft size={60} />} />
           </div>
           <div className={styles.techStackItem}>
-            <TechStack name="REST" icon={<ArrowBigUpDash size={60} />} />
+            <TechStack name="REST API" icon={<ArrowBigUpDash size={60} />} />
           </div>
           <div className={styles.techStackItem}>
             <TechStack name="Vitest/Playwright" icon={<BookOpenCheck size={60} />} />
