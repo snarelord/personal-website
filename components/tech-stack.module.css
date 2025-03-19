@@ -1,0 +1,20 @@
+.techStackIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.techStackName {
+  font-size: 18px;
+  font-weight: 400;
+  /* font-family: var(--font-playfair); */
+  text-align: center;
+  order: -1;
+}

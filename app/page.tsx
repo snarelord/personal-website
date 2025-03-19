@@ -4,9 +4,22 @@ import { useEffect, useRef } from "react";
 import anime from "animejs";
 import Image from "next/image";
 import Header from "@/components/header";
+import TechStack from "@/components/tech-stack";
 import ProjectItem from "@/components/project-item";
 import styles from "./page.module.css";
-// import { Inter } from "next/font/google";
+
+import { ChevronsLeftRight } from "lucide-react"; // js
+import { StickyNote } from "lucide-react"; // css
+import { FileCode } from "lucide-react"; // html
+import { Database } from "lucide-react"; // sql
+import { Server } from "lucide-react"; // node
+import { Globe } from "lucide-react"; // react
+import { PanelsTopLeft } from "lucide-react"; // nextjs
+import { ArrowBigUpDash } from "lucide-react"; // rest
+import { BookOpenCheck } from "lucide-react"; // vitest, jest, playwright
+import { Box } from "lucide-react"; // pinecone
+import { Computer } from "lucide-react"; // git/github
+import { Figma } from "lucide-react"; // figma
 
 export default function Home() {
   const projectRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -70,13 +83,7 @@ export default function Home() {
           <h1>Kit Jones</h1>
           <h2>Software Engineer</h2>
         </div>
-        <Image
-          src="./circumference-52-of-811.png"
-          alt="Hero background"
-          fill
-          priority
-          className={styles.heroImage}
-        />
+        <Image src="./circumference-52-of-811.png" alt="Hero background" fill priority className={styles.heroImage} />
         <div className={styles.heroOverlay} />
       </section>
 
@@ -84,21 +91,59 @@ export default function Home() {
         <div className={styles.aboutContent}>
           <h3 className="kit">Hi, I'm Kit!</h3>
           <p>
-            In 2024 I decided to take my passion for creation and
-            problem-solving into the world of programming. With nearly four
-            years in designer fashion retail management, and almost eight years
-            in electronic music production, I wanted a career that challenged me
-            while allowing me to build and innovate in new ways.
+            In 2024 I decided to take my passion for creation and problem-solving into the world of programming. With
+            nearly four years in designer fashion retail management, and almost eight years in electronic music
+            production, I wanted a career that challenged me while allowing me to build and innovate in new ways.
           </p>
           <p>
-            This journey began with the School of Code. A 16-week intensive
-            bootcamp that started to reshape my life. Now as the course comes to
-            an end, I’m looking to deepen my knowledge in both front-end and
-            back-end development.
+            This journey began with the School of Code. A 16-week intensive bootcamp that started to reshape my life.
+            Now as the course comes to an end, I’m looking to deepen my knowledge in both front-end and back-end
+            development.
           </p>
         </div>
       </section>
 
+      <section id="techstack" className={styles.techstack}>
+        <h3 className={styles.techStackTitle}>Tech Stack</h3>
+        <div className={styles.techStackContent}>
+          <div className={styles.techStackItem}>
+            <TechStack name="JavaScript/TypeScript" icon={<ChevronsLeftRight size={60} />} />
+          </div>
+          <div className={styles.techStackItem}>
+            <TechStack name="HTML" icon={<FileCode size={60} />} />
+          </div>
+          <div className={styles.techStackItem}>
+            <TechStack name="CSS" icon={<StickyNote size={60} />} />
+          </div>
+          <div className={styles.techStackItem}>
+            <TechStack name="SQL" icon={<Database size={60} />} />
+          </div>
+          <div className={styles.techStackItem}>
+            <TechStack name="Node.js" icon={<Server size={60} />} />
+          </div>
+          <div className={styles.techStackItem}>
+            <TechStack name="React" icon={<Globe size={60} />} />
+          </div>
+          <div className={styles.techStackItem}>
+            <TechStack name="Next.js" icon={<PanelsTopLeft size={60} />} />
+          </div>
+          <div className={styles.techStackItem}>
+            <TechStack name="REST" icon={<ArrowBigUpDash size={60} />} />
+          </div>
+          <div className={styles.techStackItem}>
+            <TechStack name="Vitest/Playwright" icon={<BookOpenCheck size={60} />} />
+          </div>
+          <div className={styles.techStackItem}>
+            <TechStack name="Pinecone" icon={<Box size={60} />} />
+          </div>
+          <div className={styles.techStackItem}>
+            <TechStack name="Git/GitHub" icon={<Computer size={60} />} />
+          </div>
+          <div className={styles.techStackItem}>
+            <TechStack name="Figma" icon={<Figma size={60} />} />
+          </div>
+        </div>
+      </section>
       <section id="portfolio" className={styles.portfolio}>
         <div className={styles.portfolioContent}>
           <h3 className="portfolio-text">Portfolio</h3>
