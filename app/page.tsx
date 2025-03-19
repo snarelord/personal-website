@@ -7,7 +7,6 @@ import Header from "@/components/header";
 import TechStack from "@/components/tech-stack";
 import ProjectItem from "@/components/project-item";
 import styles from "./page.module.css";
-// import { Inter } from "next/font/google";
 
 import { ChevronsLeftRight } from "lucide-react"; // js
 import { StickyNote } from "lucide-react"; // css
@@ -106,18 +105,43 @@ export default function Home() {
 
       <section id="techstack" className={styles.techstack}>
         <h3 className={styles.techStackTitle}>Tech Stack</h3>
-        <div>
-          <TechStack title="JavaScript/TypeScript" icon={<ChevronsLeftRight size={40} />} />
-          <TechStack title="CSS" icon={<StickyNote size={40} />} />
-          <TechStack title="HTML" icon={<FileCode size={40} />} />
-          <TechStack title="SQL" icon={<Database size={40} />} />
-          <TechStack title="Node.js" icon={<Server size={40} />} />
-          <TechStack title="React" icon={<Globe size={40} />} />
-          <TechStack title="Next.js" icon={<PanelsTopLeft size={40} />} />
-          <TechStack title="REST API" icon={<ArrowBigUpDash size={40} />} />
-          <TechStack title="Testing" icon={<BookOpenCheck size={40} />} />
-          <TechStack title="Git/GitHub" icon={<Computer size={40} />} />
-          <TechStack title="Figma" icon={<Figma size={40} />} />
+        <div className={styles.techStackContent}>
+          <div className={styles.techStackItem}>
+            <TechStack name="JavaScript/TypeScript" icon={<ChevronsLeftRight size={60} />} />
+          </div>
+          <div className={styles.techStackItem}>
+            <TechStack name="HTML" icon={<FileCode size={60} />} />
+          </div>
+          <div className={styles.techStackItem}>
+            <TechStack name="CSS" icon={<StickyNote size={60} />} />
+          </div>
+          <div className={styles.techStackItem}>
+            <TechStack name="SQL" icon={<Database size={60} />} />
+          </div>
+          <div className={styles.techStackItem}>
+            <TechStack name="Node.js" icon={<Server size={60} />} />
+          </div>
+          <div className={styles.techStackItem}>
+            <TechStack name="React" icon={<Globe size={60} />} />
+          </div>
+          <div className={styles.techStackItem}>
+            <TechStack name="Next.js" icon={<PanelsTopLeft size={60} />} />
+          </div>
+          <div className={styles.techStackItem}>
+            <TechStack name="REST" icon={<ArrowBigUpDash size={60} />} />
+          </div>
+          <div className={styles.techStackItem}>
+            <TechStack name="Vitest/Playwright" icon={<BookOpenCheck size={60} />} />
+          </div>
+          <div className={styles.techStackItem}>
+            <TechStack name="Pinecone" icon={<Box size={60} />} />
+          </div>
+          <div className={styles.techStackItem}>
+            <TechStack name="Git/GitHub" icon={<Computer size={60} />} />
+          </div>
+          <div className={styles.techStackItem}>
+            <TechStack name="Figma" icon={<Figma size={60} />} />
+          </div>
         </div>
       </section>
       <section id="portfolio" className={styles.portfolio}>
