@@ -245,6 +245,11 @@
   .portfolioImageWrapper {
     height: 100%;
   }
+
+  .portfolioImage {
+    max-height: 100px;
+    max-width: 100px;
+  }
 }
 
 @media (max-width: 768px) {

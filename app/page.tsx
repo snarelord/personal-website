@@ -178,13 +178,20 @@ export default function Home() {
               isReversed={true}
             />
           </div>
-          {/* <ProjectItem
-            number="03"
-            title=""
-            description=""
-            link="#"
-            imageUrl=""
-          /> */}
+          <div
+            ref={(el) => {
+              projectRefs.current[2] = el;
+            }}
+            className={styles.projectWrapper}
+          >
+            <ProjectItem
+              number="03"
+              title="Email Promo Sender"
+              description="A Node.js application to email music promo to DJs. The app reads email addresses from a recipients.json file and sends an email to each recipient with a specified link pulled from the comand line to music hosted on Dropbox. This was created to make my life easier."
+              link="https://github.com/snarelord/email-promo-sender"
+              imageUrl="/gmail_icon.png"
+            />
+          </div>
         </div>
       </section>
 
