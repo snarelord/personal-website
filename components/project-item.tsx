@@ -1,5 +1,6 @@
 import styles from "./project-item.module.css";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 interface ProjectItemProps {
   number: string;
@@ -36,9 +37,12 @@ export default function ProjectItem({
         </a>
       </div>
       <div className={styles.portfolioImageWrapper}>
-        <div
+        <Image
+          src={imageUrl || "/placeholder.svg"}
+          alt={`${title} project screenshot`}
+          width={400}
+          height={300}
           className={styles.portfolioImage}
-          style={{ backgroundImage: `url(${imageUrl})` }}
         />
       </div>
     </div>

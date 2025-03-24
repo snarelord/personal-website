@@ -1,5 +1,112 @@
 .portfolioItem {
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 6rem;
+  align-items: center;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolioItem.reversed {
+  grid-template-columns: 1fr 1fr;
+}
+
+.portfolioItem.reversed .portfolioContent {
+  order: 2;
+}
+
+.portfolioItem.reversed .portfolioImageWrapper {
+  order: 1;
+}
+
+.portfolioContent {
+  padding: 0;
+}
+
+.projectNumber {
+  font-size: 0.9rem;
+  color: #666;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-mono);
+}
+
+.portfolioContent h2 {
+  font-family: var(--font-playfair);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.portfolioContent p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.projectLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #000;
+  text-decoration: none;
+  transition: gap 0.3s ease;
+}
+
+.projectLink:hover {
+  gap: 0.8rem;
+}
+
+.portfolioImageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.portfolioImage {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolioImageWrapper:hover .portfolioImage {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .portfolioItem,
+  .portfolioItem.reversed {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .portfolioItem.reversed .portfolioContent,
+  .portfolioItem .portfolioContent {
+    order: 1;
+  }
+
+  .portfolioItem.reversed .portfolioImageWrapper,
+  .portfolioItem .portfolioImageWrapper {
+    order: 2;
+  }
+
+  .portfolioContent h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* .portfolioItem {
+  display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 4rem;
   margin-bottom: 15rem;
@@ -93,4 +200,4 @@
   .portfolioContent h2 {
     font-size: 2.5rem;
   }
-}
+} */
