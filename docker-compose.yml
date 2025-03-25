@@ -1,0 +1,41 @@
+version: "3"
+
+services:
+  # Your app service
+  web:
+    build:
+      context: .
+    container_name: personal-web-container
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - SENTRY_DSN=${SENTRY_DSN}
+      - SENTRY_AUTH_TOKEN=${SENTRY_AUTH_TOKEN}
+    depends_on:
+      - sentry # Ensure Sentry is up and running before the app starts
+    networks:
+      - sentry-net # Connect to the same network as the Sentry service
+
+  sentry:
+    image: sentry:latest # Use the latest official Sentry Docker image
+    container_name: sentry
+    environment:
+      - SENTRY_AUTH_TOKEN=${SENTRY_AUTH_TOKEN}
+      - SENTRY_DSN=${SENTRY_DSN}
+    ports:
+      - "9000:9000" # Expose Sentry's web interface
+    volumes:
+      - sentry-data:/var/lib/sentry # Persist data in a named volume
+    networks:
+      - sentry-net # Connect to the same network as your app
+    restart: always # Automatically restart if Sentry container crashes
+
+# Define a volume for Sentry data persistence
+volumes:
+  sentry-data:
+
+# Define a custom network for communication between services
+networks:
+  sentry-net:
+    driver: bridge
