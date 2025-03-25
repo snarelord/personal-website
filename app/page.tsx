@@ -34,7 +34,7 @@ export default function Home() {
               targets: entry.target,
               opacity: 1,
               visibility: "visible",
-              translateY: "translateY(0",
+              translateY: "translateY(0)",
               duration: 1000,
               easing: "easeOutExpo",
             });
@@ -59,15 +59,15 @@ export default function Home() {
       duration: 1800,
       easing: "easeOutQuad",
     });
+    // anime({
+    //   targets: "h2",
+    //   opacity: [0, 1],
+    //   translateY: [50, 0],
+    //   duration: 1800,
+    //   easing: "easeOutQuad",
+    // });
     anime({
-      targets: "h2",
-      opacity: [0, 1],
-      translateY: [50, 0],
-      duration: 1800,
-      easing: "easeOutQuad",
-    });
-    anime({
-      targets: ".portfolio-text",
+      targets: "projectWrapper",
       scale: [1.8, 1.3],
       opacity: [0.6, 1],
       duration: 1000,
@@ -189,7 +189,22 @@ export default function Home() {
               title="Email Promo Sender"
               description="A Node.js application to email music promo to DJs. The app reads email addresses from a recipients.json file and sends an email to each recipient with a specified link pulled from the comand line to music hosted on Dropbox. This was created to make my life easier."
               link="https://github.com/snarelord/email-promo-sender"
-              imageUrl="/gmail_icon.png"
+              imageUrl="/email_icon.png"
+            />
+          </div>
+          <div
+            ref={(el) => {
+              projectRefs.current[3] = el;
+            }}
+            className={styles.projectWrapper}
+          >
+            <ProjectItem
+              number="04"
+              title="Blackjack"
+              description="A School of Code Hackathon created in during week 10 DevOps. Showcasing a CI/CD pipeline, testing and containerisation."
+              link="https://github.com/snarelord/week-10-hackathon-blackjack"
+              imageUrl="/blackjack.png"
+              isReversed={true}
             />
           </div>
         </div>

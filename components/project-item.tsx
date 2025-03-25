@@ -20,19 +20,12 @@ export default function ProjectItem({
   isReversed = false,
 }: ProjectItemProps) {
   return (
-    <div
-      className={`${styles.portfolioItem} ${isReversed ? styles.reversed : ""}`}
-    >
+    <div className={`${styles.portfolioItem} ${isReversed ? styles.reversed : ""}`}>
       <div className={styles.portfolioContent}>
         <span className={styles.projectNumber}>{number}</span>
         <h2>{title}</h2>
         <p>{description}</p>
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.projectLink}
-        >
+        <a href={link} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
           View Project <ArrowRight size={20} />
         </a>
       </div>
