@@ -2,7 +2,4 @@ node_modules
 .next
 .env
 .env.sentry-build-plugin
-sentry.client.config.ts
-sentry.edge.config.ts
-sentry.server.config.ts
 
