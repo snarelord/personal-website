@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sentry/nextjs": "^9.9.0",
+    "@sentry/react": "^9.9.0",
     "animejs": "^3.2.2",
     "lucide-react": "^0.303.0",
     "next": "^14.2.24",
