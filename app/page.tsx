@@ -201,7 +201,7 @@ export default function Home() {
             <ProjectItem
               number="04"
               title="Blackjack"
-              description="A School of Code Hackathon created in during week 10 DevOps. Showcasing a CI/CD pipeline, testing and containerisation."
+              description="A School of Code Hackathon created during week 10 DevOps. Showcasing a CI/CD pipeline, testing and containerisation."
               link="https://github.com/snarelord/week-10-hackathon-blackjack"
               imageUrl="/blackjack.png"
               isReversed={true}
