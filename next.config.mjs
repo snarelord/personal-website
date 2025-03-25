@@ -3,7 +3,7 @@ let userConfig = undefined;
 try {
   userConfig = await import("./v0-user-next.config");
 } catch (e) {
-  // ignore error
+  console.warn("No user config found, proceeding with default config.");
 }
 
 /** @type {import('next').NextConfig} */
