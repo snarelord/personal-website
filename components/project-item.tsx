@@ -5,7 +5,7 @@ import Image from "next/image";
 interface ProjectItemProps {
   number: string;
   title: string;
-  techIcons: string;
+  techIcons: React.ReactNode;
   description: string;
   link: string;
   imageUrl: string;

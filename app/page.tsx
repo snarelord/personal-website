@@ -157,6 +157,12 @@ export default function Home() {
             <ProjectItem
               number="01"
               title="Novari"
+              techIcons={[
+                <Globe size={40} />,
+                <PanelsTopLeft size={40} />,
+                <ChevronsLeftRight size={40} />,
+                <Server size={40} />,
+              ]}
               description="A website application, planned and built over the group final project week at the School of Code. Novari is designed to tackle the issue of users loneliness and personal growth through community connection. Created with Next.js, React, TypeScript/JavaScript and Tailwind."
               link="https://github.com/AJHemmings/Novari"
               imageUrl="/novari.png?height=600&width=800"
@@ -172,6 +178,12 @@ export default function Home() {
             <ProjectItem
               number="02"
               title="Monopoly DEAL"
+              techIcons={[
+                <Globe size={40} />,
+                <PanelsTopLeft size={40} />,
+                <ChevronsLeftRight size={40} />,
+                <Server size={40} />,
+              ]}
               description="In development website application remaking the Monopoly Deal card game. Building with Next.js, React, TypeScript/JavaScript. The game is designed to be played with friends and family online."
               link="https://github.com/snarelord/monopoly-deal"
               imageUrl="/monopoly-deal.png?height=600&width=800"
@@ -187,6 +199,12 @@ export default function Home() {
             <ProjectItem
               number="03"
               title="Email Promo Sender"
+              techIcons={[
+                <Globe size={40} />,
+                <PanelsTopLeft size={40} />,
+                <ChevronsLeftRight size={40} />,
+                <Server size={40} />,
+              ]}
               description="A Node.js application to email music promo to DJs. The app reads email addresses from a recipients.json file and sends an email to each recipient with a specified link pulled from the comand line to music hosted on Dropbox. This was created to make my life easier."
               link="https://github.com/snarelord/email-promo-sender"
               imageUrl="/email_icon.png"
@@ -201,6 +219,12 @@ export default function Home() {
             <ProjectItem
               number="04"
               title="Blackjack"
+              techIcons={[
+                <Globe size={40} />,
+                <PanelsTopLeft size={40} />,
+                <ChevronsLeftRight size={40} />,
+                <Server size={40} />,
+              ]}
               description="A School of Code Hackathon created during week 10 DevOps. Showcasing a CI/CD pipeline, testing and containerisation."
               link="https://github.com/snarelord/week-10-hackathon-blackjack"
               imageUrl="/blackjack.png"
