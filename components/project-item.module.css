@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  margin-bottom: 6rem;
+  margin-bottom: 7rem;
   align-items: center;
   max-width: 1000px;
   margin-left: auto;
@@ -21,8 +21,8 @@
   order: 1;
 }
 
-.portfolioContent {
-  padding: 0;
+.techIcons {
+  padding-bottom: 1rem;
 }
 
 .projectNumber {
