@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import anime from "animejs";
 import Image from "next/image";
-import Header from "../components/header";
+import Header from "../components/Header";
 import TechStack from "../components/TechStack";
 import ProjectItem from "../components/ProjectItem";
 import styles from "./page.module.css";
@@ -55,7 +55,6 @@ export default function Home() {
 
       constructor(ctx: CanvasRenderingContext2D, width: number, height: number) {
         this.ctx = ctx;
-        // this.#ctx.strokeStyle = "white";
         this.ctx.lineWidth = 0.5;
         this.width = width;
         this.height = height;
