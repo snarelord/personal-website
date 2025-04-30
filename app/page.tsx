@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import anime from "animejs";
 import Image from "next/image";
-import Header from "../components/Header";
+import Header from "../components/Header"; // fix
 import TechStack from "../components/TechStack";
 import ProjectItem from "../components/ProjectItem";
 import styles from "./page.module.css";
