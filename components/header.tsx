@@ -3,7 +3,7 @@
 // import Link from "next/link";
 import { useState } from "react";
 import { Github, Linkedin, Instagram, Menu, X } from "lucide-react";
-import styles from "./Header.module.css";
+import styles from "./header.module.css";
 
 export default function Header() {
   // add state for hamburger menu, only viewable on mobile

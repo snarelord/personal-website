@@ -21,6 +21,8 @@ import { Box } from "lucide-react"; // pinecone
 import { Computer } from "lucide-react"; // git/github
 import { Figma } from "lucide-react"; // figma
 
+let flowFieldAnimation: number;
+
 export default function Home() {
   const projectRefs = useRef<(HTMLDivElement | null)[]>([]);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
