@@ -3,9 +3,9 @@
 import { useEffect, useRef } from "react";
 import anime from "animejs";
 import Image from "next/image";
-import Header from "../components/Header"; // fix
-import TechStack from "../components/TechStack";
-import ProjectItem from "../components/ProjectItem";
+import Header from "@/components/Header";
+import TechStack from "@/components/TechStack";
+import ProjectItem from "@/components/ProjectItem";
 import styles from "./page.module.css";
 
 import { ChevronsLeftRight } from "lucide-react"; // js
@@ -20,15 +20,6 @@ import { BookOpenCheck } from "lucide-react"; // vitest, jest, playwright
 import { Box } from "lucide-react"; // pinecone
 import { Computer } from "lucide-react"; // git/github
 import { Figma } from "lucide-react"; // figma
-
-let flowFieldAnimation: number;
-
-// const canvasRef = useRef<HTMLCanvasElement | null>(null);
-// const ctxRef = useRef<CanvasRenderingContext2D | null>(null);
-// const animationRef = useRef<number>(0);
-// const flowFieldRef = useRef<any>(null);
-
-// testing
 
 export default function Home() {
   const projectRefs = useRef<(HTMLDivElement | null)[]>([]);
