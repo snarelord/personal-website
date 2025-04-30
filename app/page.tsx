@@ -30,7 +30,12 @@ export default function Home() {
   const animationRef = useRef<number>(0);
   const flowFieldRef = useRef<any>(null);
 
+  // check if device is mobile
+  const isMobile = typeof window !== "undefined" && /Mobi|Android/i.test(navigator.userAgent);
+
   useEffect(() => {
+    if (isMobile) return; // don't run on mobile devices
+
     const canvas = document.getElementById("techStackCanvas") as HTMLCanvasElement;
     const container = canvas?.parentElement;
     if (!canvas || !container) return;
