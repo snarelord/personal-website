@@ -267,7 +267,7 @@ export default function Home() {
       </section>
       <section id="portfolio" className={styles.portfolio}>
         <div className={styles.portfolioContent}>
-          <h3 className="portfolio-text">Portfolio</h3>
+          <h3 className={styles.portfolioTitle}>Portfolio</h3>
           <div
             ref={(el) => {
               projectRefs.current[0] = el;
