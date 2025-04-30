@@ -1,4 +1,4 @@
-import styles from "./tech-stack.module.css";
+import styles from "./TechStack.module.css";
 
 interface TechStackItemProps {
   icon: React.ReactNode;
