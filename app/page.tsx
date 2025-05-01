@@ -57,14 +57,14 @@ export default function Home() {
         this.width = width;
         this.height = height;
         this.lastTime = 0;
-        this.interval = 1000 / 60;
+        this.interval = 1000 / 30;
         this.timer = 0;
-        this.cellSize = 7;
+        this.cellSize = 10;
         this.gradient = this.ctx.createLinearGradient(0, 0, this.width, this.height);
         this.#createGradient();
         this.ctx.strokeStyle = this.gradient;
         this.radius = 0;
-        this.vr = 0.02; // speed
+        this.vr = 0.015; // speed
       }
 
       #createGradient() {
